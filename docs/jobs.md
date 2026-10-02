@@ -7,11 +7,11 @@
 | CIF | 35861771 |
 | Brand | connatix |
 | Status | activ |
-| Location | PLOIEŞTI, 36-36N, 38, Municipiul Cluj-Napoca, Cluj |
+| Location | JUD. CLUJ, MUN. CLUJ-NAPOCA, STR. PLOIEŞTI, NR.36-36N, 38, ET.2 |
 | Website | [https://jwx.com](https://jwx.com) |
 | Careers | [https://jwx.com/careers](https://jwx.com/careers) |
-| Last Scraped | 2026-07-26 |
+| Last Scraped | 2026-10-02 |
 
 ## Current Job Listings (0)
 
-_Generated: 2026-07-26T08:32:20.118Z_
+_Generated: 2026-10-02T12:46:01.359Z_
