@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+import { fetchWithRetry as fetch, assertCanary } from "./src/premium.js";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import { validateAndGetCompany } from "./company.js";
@@ -246,6 +246,7 @@ async function main() {
     const rawJobs = await scrapeAllListings(testOnlyOnePage);
     const scrapedCount = rawJobs.length;
     console.log(`Jobs scraped from JWX Careers website: ${scrapedCount}`);
+    assertCanary({ scraped: scrapedCount, existing: existingCount, source: "careers site" });
 
     if (!testOnlyOnePage) {
       const anofmJobs = await searchANOFM(localCif);
