@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Romanian location filtering
 - Work mode normalization
 
-Derived from sebiboga/epam-systems-international-srl-nodejs-scraper.
+Derived from peviitor-scrapers/epam-systems-international-srl-nodejs-scraper.
 
 ## License
 

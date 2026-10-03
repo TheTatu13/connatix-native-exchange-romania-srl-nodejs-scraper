@@ -4,7 +4,7 @@ Thank you for your interest in contributing!
 
 ## 🌱 This Repo Is a Derived Scraper
 
-Acesta este un scraper derivat pentru CONNATIX NATIVE EXCHANGE ROMANIA SRL, bazat pe template-ul [epam-systems-international-srl-nodejs-scraper](https://github.com/sebiboga/epam-systems-international-srl-nodejs-scraper).
+Acesta este un scraper derivat pentru CONNATIX NATIVE EXCHANGE ROMANIA SRL, bazat pe template-ul [epam-systems-international-srl-nodejs-scraper](https://github.com/peviitor-scrapers/epam-systems-international-srl-nodejs-scraper).
 
 Pentru mai multe detalii despre cum să contribuiți, vedeți codul existent sau consultați template-ul original.
 
@@ -31,7 +31,7 @@ npm test
 
 ## Reporting Issues
 
-Open a [GitHub Issue](https://github.com/TheTatu13/connatix-native-exchange-romania-srl-nodejs-scraper/issues) with:
+Open a [GitHub Issue](https://github.com/peviitor-scrapers/connatix-native-exchange-romania-srl-nodejs-scraper/issues) with:
 - Clear description of the problem
 - Steps to reproduce
 - Expected vs actual behavior

@@ -7,5 +7,5 @@
   "apiBase": "https://boards-api.greenhouse.io/v1/boards/jwp",
   "apiEndpoint": "/jobs",
   "defaultLocation": "Cluj-Napoca",
-  "scraperFile": "https://raw.githubusercontent.com/TheTatu13/connatix-native-exchange-romania-srl-nodejs-scraper/main/.github/workflows/job-seeker-ro-spider.yml"
+  "scraperFile": "https://raw.githubusercontent.com/peviitor-scrapers/connatix-native-exchange-romania-srl-nodejs-scraper/main/.github/workflows/job-seeker-ro-spider.yml"
 }
