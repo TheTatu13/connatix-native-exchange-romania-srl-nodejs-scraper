@@ -7,20 +7,15 @@ import fetch from 'node-fetch';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.resolve(__dirname, '../../.env.local') });
 
-const HAS_SOLR = !!process.env.SOLR_AUTH;
+// Live API tests hit api.peviitor.ro (no credential needed) -- opt in explicitly.
+const HAS_SOLR = !!process.env.RUN_LIVE_API_TESTS;
 
 function itIfSolr(name, fn, timeout) {
   if (HAS_SOLR) {
     return it(name, fn, timeout);
   }
-  return it.skip(`${name} (skipped: SOLR_AUTH not set)`, fn, timeout);
+  return it.skip(`${name} (skipped: set RUN_LIVE_API_TESTS=1 to run)`, fn, timeout);
 }
-
-beforeAll(() => {
-  if (HAS_SOLR) {
-    process.env.SOLR_AUTH = process.env.SOLR_AUTH;
-  }
-});
 
 import companyConfig from '../../config/company.js';
 const TEST_CIF = companyConfig.cif;
@@ -237,10 +232,9 @@ describe('E2E: Full Scraping Pipeline', () => {
     }, 15000);
 
     itIfSolr('should have company core entry with required fields', async () => {
-      const result = await solr.queryCompanySOLR(`id:${TEST_CIF}`);
+      const companyEntry = await solr.getCompanyByCif(TEST_CIF);
 
-      expect(result.numFound).toBe(1);
-      const companyEntry = result.docs[0];
+      expect(companyEntry).not.toBeNull();
       expect(companyEntry.company).toBe('CONNATIX NATIVE EXCHANGE ROMANIA SRL');
       expect(companyEntry.status).toBe('activ');
     }, 15000);
